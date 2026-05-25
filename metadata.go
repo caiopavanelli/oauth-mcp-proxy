@@ -47,7 +47,7 @@ func (h *OAuth2Handler) HandleMetadata(w http.ResponseWriter, r *http.Request) {
 		"registration_endpoint":    fmt.Sprintf("%s/oauth/register", h.config.MCPURL),
 		"response_types_supported": []string{"code"},
 		"response_modes_supported": []string{"query"},
-		"grant_types_supported":    []string{"authorization_code"},
+		"grant_types_supported":    []string{"authorization_code", "refresh_token"},
 	}
 
 	// Add provider-specific metadata
